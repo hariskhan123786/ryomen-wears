@@ -1,0 +1,174 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Page</title>
+    <link rel="stylesheet" href="shipping-styles.css">
+    <script defer src="shipping-script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">RYOMEN WEARS</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="shipping.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Shipping Container -->
+    <section class="shipping-container">
+        <h1>Shipping Information</h1>
+        <div class="content-wrapper">
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h2>Your Cart</h2>
+                <div class="cart-item">
+                    <img src="https://via.placeholder.com/100x120" alt="Plain Sweatshirt">
+                    <div>
+                        <h3>Plain Sweatshirt</h3>
+                        <p>Price: <span class="price">1999</span> PKR</p>
+                        <label>Quantity:</label>
+                        <input type="number" class="quantity" value="1" min="1">
+                    </div>
+                </div>
+                <div class="total">
+                    <h3>Total: Rs. <span id="total-price">1999</span> PKR</h3>
+                </div>
+            </div>
+
+            <!-- Shipping Form -->
+            <div class="shipping-form">
+                <h2>Enter Shipping Details</h2>
+                <form action="thank-you.html" method="post" id="shipping-form">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your shipping address" required>
+                
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                    <!-- Submit Button -->
+                    <button type="submit">Submit</button>
+                </form>
+                <script>
+                    const quantityInput = document.querySelector('.quantity');
+                    const totalPriceSpan = document.getElementById('total-price');
+                    const price = 1999;
+
+                    quantityInput.addEventListener('input', () => {
+                        const quantity = parseInt(quantityInput.value);
+                        const totalPrice = quantity * price;
+                        totalPriceSpan.textContent = totalPrice;
+                    });
+
+                    document.getElementById('shipping-form').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const formData = {
+                            name: e.target.name.value,
+                            address: e.target.address.value,
+                            email: e.target.email.value
+                        };
+                    
+                        try {
+                            const response = await fetch('http://localhost:3000/api/shipping', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(formData)
+                            });
+                            const result = await response.json();
+                            alert(`Order Success! Order ID: ${result.orderId}`);
+                        } catch (error) {
+                            alert('Error placing order. Please try again.');
+                            console.error(error);
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    document.getElementById("shipping-form").addEventListener("submit", function (e) {
+        const name = document.getElementById("name").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const city = document.getElementById("city").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+
+        if (!name || !address || !city || !phone || !email) {
+            e.preventDefault(); // Prevent submission
+            alert("Please fill in all the required fields before proceeding.");
+        }
+    });
+</script><!-- Customer Review Section -->
+<section class="reviews">
+   <h2 class="section-title">What Our Customers Say</h2>
+   <div class="reviews-container">
+       <div class="review-card">
+           <p class="review-text">"Great quality and fast delivery! Highly recommended."</p>
+           <h4 class="review-author"> unzilla kakar</h4>
+       </div>
+       <div class="review-card">
+           <p class="review-text">"Excellent customer service. The product exceeded my expectations."</p>
+           <h4 class="review-author">ahad sheikh</h4>
+       </div>
+       <div class="review-card">
+           <p class="review-text">"Affordable prices and reliable delivery. Love this store!"</p>
+           <h4 class="review-author">- Sarah khan</h4>
+       </div>
+   </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+   <div class="container">
+       <div class="footer-description">
+           <h2>About Our Store</h2>
+           <p>
+               Welcome to  RYOMEN WEARS! We provide the best quality products 
+               to fulfill your needs. Enjoy seamless shopping with our user-friendly 
+               platform and exceptional customer service.
+           </p>
+       </div>
+       <div class="footer-contact">
+           <h2>Contact Us</h2>
+           <ul>
+               <li>Email: <a href="mailto:ryomenwear@gmail.com"> ryomenwear@gmail.com</a></li>
+               <li>Phone: <a href="03188353770 "> 03188353771</a></li>
+               
+           </ul>
+       </div>
+       <div class="footer-social">
+           <h2>Follow Us</h2>
+           <ul>
+               <li><a href="https://facebook.com/yourstore" target="_blank">Facebook</a></li>
+               <li><a href="https://twitter.com/yourstore" target="_blank">Twitter</a></li>
+               <li><a href=" https://www.instagram.com/ryomenwears/" target="_blank">Instagram</a></li>
+           </ul>
+       </div>
+   </div>
+</footer>
+
+</body>
+</html>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryomen Wears</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Ryomen Wears</div>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="shipping.html" class="cart-button">Cart (0)</a></li>
+        </ul>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Discover Your Style</h1>
+            <p>Premium apparel for all seasons</p>
+            <a href="#product-list" class="shop-now">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <div class="search-filter-bar">
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search products...">
+        </div>
+        <div class="filter-dropdown">
+            <select id="filter">
+                <option value="all">All Categories</option>
+                <option value="sweatshirt">Sweatshirts</option>
+                <option value="jackets">Jackets</option>
+                <option value="caps">Caps</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Hot Selling Section -->
+    <section class="hot-selling">
+        <h2>Hot Selling</h2>
+        <div class="products">
+            <div class="product-card" data-category="jacket">
+                <img src=" bikerlather jackets .jpeg" alt=" Men's Biker Jackets " onclick="openModal('Leather Jacket', 'A stylish leather jacket for all occasions.')">
+                <h3> Men's Biker Jackets </h3>
+                <p class="price"><span class="new-price">Rs. 6,499.00 PKR</span></p>
+                <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product-card" data-category="jacket">
+                <img src=" mensfulslevejackets.jpeg" alt=" Men's Fullsleeve Jacket" onclick="openModal(' fulsleeve jackets ', 'A classic baseball cap for sunny days.')">
+                <h3> Men's Fullsleeve Jackets🔥</h3>
+                <p class="price"><span class="new-price">Rs. 799.00 PKR</span></p>
+                <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="product-list">
+        <h2>All Products</h2>
+        <!-- Product Cards -->
+        <div class="product-card" data-category=" mens hoodies">
+            <img src="Menshoodies.jpeg" alt=" menshodies" onclick="openModal('menshoodies', 'A comfortable  mens hoodies collection.')">
+            <h3> mens hoodies</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card" data-category="sweatshirt">
+            <img src="Track suit.jpeg" alt=" track suit" onclick="openModal(' Track suit', 'A comfortable mens winter track suit .')">
+            <h3> mens track suit </h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card" data-category="sweatshirt">
+            <img src="https://via.placeholder.com/300x400" alt="Plain Sweatshirt" onclick="openModal('Plain Sweatshirt', 'A comfortable plain sweatshirt.')">
+            <h3>Plain Sweatshirt</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div> <div class="product-card" data-category="sweatshirt">
+            <img src="https://via.placeholder.com/300x400" alt="Plain Sweatshirt" onclick="openModal('Plain Sweatshirt', 'A comfortable plain sweatshirt.')">
+            <h3>Plain Sweatshirt</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card" data-category="sweatshirt">
+            <img src="https://via.placeholder.com/300x400" alt="Plain Sweatshirt" onclick="openModal('Plain Sweatshirt', 'A comfortable plain sweatshirt.')">
+            <h3>Plain Sweatshirt</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card" data-category="sweatshirt">
+            <img src="https://via.placeholder.com/300x400" alt="Plain Sweatshirt" onclick="openModal('Plain Sweatshirt', 'A comfortable plain sweatshirt.')">
+            <h3>Plain Sweatshirt</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card" data-category="sweatshirt">
+            <img src="https://via.placeholder.com/300x400" alt="Plain Sweatshirt" onclick="openModal('Plain Sweatshirt', 'A comfortable plain sweatshirt.')">
+            <h3>Plain Sweatshirt</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card" data-category="sweatshirt">
+            <img src="https://via.placeholder.com/300x400" alt="Plain Sweatshirt" onclick="openModal('Plain Sweatshirt', 'A comfortable plain sweatshirt.')">
+            <h3>Plain Sweatshirt</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="product-card" data-category="sweatshirt">
+            <img src="Half shirts.jpeg" alt=" Mens shirts" onclick="openModal(' Mens Shirts⚫⚪', 'A  comfortable plain Shirts⚫⚪.')">
+            <h3>Men's Black & White Shirts⚫⚪</h3>
+            <p class="price">
+                <span class="old-price">Rs. 2,499.00 PKR</span>
+                <span class="new-price">Rs. 1,999.00 PKR</span>
+            </p>
+            <a href="shipping.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <!-- Add remaining product cards similarly -->
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openModal(title, description) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-description').textContent = description;
+            document.getElementById('productModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+
+        // Search and Filter
+        document.getElementById('search').addEventListener('input', function() {
+            const searchValue = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product-card');
+
+            products.forEach(product => {
+                const title = product.querySelector('h3').textContent.toLowerCase();
+                product.style.display = title.includes(searchValue) ? '' : 'none';
+            });
+        });
+
+        document.getElementById('filter').addEventListener('change', function() {
+            const category = this.value;
+            const products = document.querySelectorAll('.product-card');
+
+            products.forEach(product => {
+                const productCategory = product.getAttribute('data-category');
+                product.style.display = category === 'all' || category === productCategory ? '' : 'none';
+            });
+        });
+    </script>
+     <!-- Customer Review Section -->
+     <section class="reviews">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <p class="review-text">"Great quality and fast delivery! Highly recommended."</p>
+                <h4 class="review-author"> unzilla kakar</h4>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"Excellent customer service. The product exceeded my expectations."</p>
+                <h4 class="review-author">ahad sheikh</h4>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"Affordable prices and reliable delivery. Love this store!"</p>
+                <h4 class="review-author">- Sarah khan</h4>
+            </div>
+        </div>
+    </section>
+      <!-- Review Submission Section -->
+      <section class="review-form-section">
+        <h2 class="section-title">Write a Review</h2>
+        <form class="review-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="review">Your Review</label>
+                <textarea id="review" name="review" rows="5" placeholder="Write your feedback here" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-description">
+                <h2>About Our Store</h2>
+                <p>
+                    Welcome to  RYOMEN WEARS! We provide the best quality products 
+                    to fulfill your needs. Enjoy seamless shopping with our user-friendly 
+                    platform and exceptional customer service.
+                </p>
+            </div>
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>Email: <a href="mailto:ryomenwear@gmail.com"> ryomenwear@gmail.com</a></li>
+                    <li>Phone: <a href="03188353770 "> 03188353771</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="https://facebook.com/yourstore" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/yourstore" target="_blank">Twitter</a></li>
+                    <li><a href=" https://www.instagram.com/ryomenwears/" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+ 
